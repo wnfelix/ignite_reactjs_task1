@@ -1,0 +1,122 @@
+:root {
+	--header-height: 150px; /* Defina o valor do padding desejado */
+	--main-height: calc(100vh - var(--header-height));
+	--tasks-height: calc(var(--main-height) - 150px);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--gray-800);
+	padding: 10px;
+	height: 100vh;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	max-width: 800px;
+	width: 100%;
+	min-height: 150px;
+}
+
+.header img {
+	height: 33px;
+}
+
+.main {
+	max-width: 800px;
+	width: 100%;
+	height: var(--main-height);
+}
+
+.contentAdd {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	gap: 5px;
+	top: -20px;
+}
+
+.contentAdd input[type="text"] {
+	background-color: var(--gray-400);
+	color: var(--gray-300);
+	border-radius: 8px;
+	font-size: small;
+	width: 100%;
+	padding: 10px;
+	max-width: 35rem;
+}
+
+.contentAdd button[type="submit"] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	width: 100px;
+	background-color: var(--blueDark);
+	color: var(--gray-100);
+	border-radius: 8px;
+	font-size: small;
+	cursor: pointer;
+	transition: 500ms;
+}
+
+.contentAdd button[type="submit"]:hover {
+	background-color: var(--blue);
+}
+
+.counter {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0 20px 0;
+	font-size: small;
+}
+
+.counter div {
+	display: flex;
+	gap: 5px;
+	font-size: 0.7rem;
+	font-weight: bold;
+}
+
+.counter span {
+	display: block;
+	color: white;
+	background-color: var(--gray-350);
+	border-radius: 40%;
+	padding: 0 5px;
+	text-align: center;
+}
+
+.countCreated {
+	color: var(--blue);
+}
+
+.countConcluded {
+	color: var(--purple);
+}
+
+.noTasks {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px 0;
+	border-top: 1px solid var(--gray-300);
+	gap: 5px;
+}
+
+.noTasks > span:first-of-type {
+	font-weight: bold;
+}
+
+.tasks {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	height: var(--tasks-height);
+	overflow-y: auto;
+}
